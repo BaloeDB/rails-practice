@@ -1,6 +1,6 @@
 X 1. Create a new Rails application with a model `User` having attributes `name` and `email`.
 X 2. Write a migration to add a `username` column to the `User` model.
-3. Write a validation to ensure the `name` attribute in the `User` model is always present.
+X 3. Write a validation to ensure the `name` attribute in the `User` model is always present.
 4. Write a validation to ensure the `email` attribute in the `User` model is unique.
 5. Write a callback to downcase the `email` attribute before saving a `User` instance.
 6. Create a new `User` instance and save it to the database.
