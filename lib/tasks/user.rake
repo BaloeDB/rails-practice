@@ -37,4 +37,29 @@ namespace :user do
             puts "Incorrect filter"
         end
     end
+
+    desc "Update the `name` attribute of the `User` instance you just retrieved."
+    task update: [:environment] do
+        print "Enter id: "
+        id = STDIN.gets.chomp.to_i
+
+        puts "---Orginal---"
+        begin
+            user = User.find_by(id: id)
+            pp user
+        rescue => error
+            puts error.message
+        end
+
+        print "Enter name: "
+        name = STDIN.gets.chomp
+        print "Enter username: "
+        username = STDIN.gets.chomp
+        print "Enter email: "
+        email = STDIN.gets.chomp
+  
+        puts "---Updated---"
+        user.update(name: name, username: username, email: email)
+        pp user
+      end
 end
