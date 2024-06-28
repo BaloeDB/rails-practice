@@ -6,7 +6,7 @@ X 5. Write a callback to downcase the `email` attribute before saving a `User` i
 X 6. Create a new `User` instance and save it to the database.
 X 7. Retrieve the `User` instance you just created from the database.
 X 8. Update the `name` attribute of the `User` instance you just retrieved.
-9. Delete the `User` instance you just updated from the database.
+X 9. Delete the `User` instance you just updated from the database.
 10. Create a model `Post` with attributes `title` and `content`.
 11. Write a migration to add a `user_id` column to the `Post` model.
 12. Establish a one-to-many association between the `User` and `Post` models.

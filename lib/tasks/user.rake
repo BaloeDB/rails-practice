@@ -62,4 +62,23 @@ namespace :user do
         user.update(name: name, username: username, email: email)
         pp user
       end
+
+    desc "Delete the `User` instance you just updated from the database."
+    task delete: [:environment] do
+        print "Enter id: "
+        id = STDIN.gets.chomp.to_i
+
+        puts "---To Remove---"
+        begin
+            user = User.find_by(id: id)
+            pp user
+        rescue => error
+            puts error.message
+        end
+
+        User.delete_by(id: id)
+  
+        puts "---Updated Users---"
+        pp User.all
+      end
 end
