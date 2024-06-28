@@ -16,5 +16,5 @@ X 15. Update the `title` attribute of a `Post` instance associated with a `User`
 X 16. Delete a `Post` instance associated with a `User` instance.
 X 17. Write a scope in the `User` model to retrieve all users with a specific `name`.
 X 18. Write a scope in the `Post` model to retrieve all posts with a specific `title`.
-19. Write a method in the `User` model to calculate the number of associated `Post` instances.
+X 19. Write a method in the `User` model to calculate the number of associated `Post` instances.
 20. Write a method in the `Post` model to calculate the number of words in the `content` attribute.
