@@ -1,4 +1,4 @@
-1. Create a new Rails application with a model `User` having attributes `name` and `email`.
+X 1. Create a new Rails application with a model `User` having attributes `name` and `email`.
 2. Write a migration to add a `username` column to the `User` model.
 3. Write a validation to ensure the `name` attribute in the `User` model is always present.
 4. Write a validation to ensure the `email` attribute in the `User` model is unique.
