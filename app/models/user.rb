@@ -4,5 +4,7 @@ class User < ApplicationRecord
     validates :name, :username, :email, uniqueness: true
 
     # CALLBACKS
-    before_safe -> (user) { user.email = user.email.downcase }
+    before_save -> (user) { 
+        user.email = user.email.downcase 
+    }
 end
