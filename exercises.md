@@ -4,7 +4,7 @@ X 3. Write a validation to ensure the `name` attribute in the `User` model is al
 X 4. Write a validation to ensure the `email` attribute in the `User` model is unique.
 X 5. Write a callback to downcase the `email` attribute before saving a `User` instance.
 X 6. Create a new `User` instance and save it to the database.
-7. Retrieve the `User` instance you just created from the database.
+X 7. Retrieve the `User` instance you just created from the database.
 8. Update the `name` attribute of the `User` instance you just retrieved.
 9. Delete the `User` instance you just updated from the database.
 10. Create a model `Post` with attributes `title` and `content`.
