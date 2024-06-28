@@ -12,7 +12,7 @@ X 11. Write a migration to add a `user_id` column to the `Post` model.
 X 12. Establish a one-to-many association between the `User` and `Post` models.
 X 13. Create a new `Post` instance associated with a `User` instance.
 X 14. Retrieve all `Post` instances associated with a `User` instance.
-15. Update the `title` attribute of a `Post` instance associated with a `User` instance.
+X 15. Update the `title` attribute of a `Post` instance associated with a `User` instance.
 16. Delete a `Post` instance associated with a `User` instance.
 17. Write a scope in the `User` model to retrieve all users with a specific `name`.
 18. Write a scope in the `Post` model to retrieve all posts with a specific `title`.
