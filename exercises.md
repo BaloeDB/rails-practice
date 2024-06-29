@@ -10,7 +10,7 @@ X 3. **Remove a Column**:
 X 4. **Modify a Column**:
    - Create a migration to change the data type of the `birthdate` column from string to date.
 
-5. **Add an Index**:
+X 5. **Add an Index**:
    - Write a migration to add an index on the `email` column of the `users` table.
 
 6. **Create a Join Table**:
