@@ -13,7 +13,7 @@ X 4. **Modify a Column**:
 X 5. **Add an Index**:
    - Write a migration to add an index on the `email` column of the `users` table.
 
-6. **Create a Join Table**:
+X 6. **Create a Join Table**:
    - Generate a migration for a many-to-many relationship between `users` and `roles`.
 
 7. **Seed Data**:
