@@ -7,7 +7,7 @@ X 2. **Add a Column**:
 X 3. **Remove a Column**:
    - Write a migration to remove the `password` column from the `users` table.
 
-4. **Modify a Column**:
+X 4. **Modify a Column**:
    - Create a migration to change the data type of the `birthdate` column from string to date.
 
 5. **Add an Index**:
