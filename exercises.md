@@ -47,6 +47,9 @@ X 14. **Add Foreign Key Constraint**:
 
 15. **Create a View**:
     - Generate a migration to create a database view that combines data from multiple tables.
+    - Views probably don't work for standard database. Again, a postgresql thing.
+    - https://www.netguru.com/blog/database-views-and-how-to-use-them-in-a-ror-based-app
+    - https://github.com/scenic-views/scenic
 
 16. **Add a Unique Index**:
     - Create a migration to add a unique index on the `sku` column in the `products` table.
