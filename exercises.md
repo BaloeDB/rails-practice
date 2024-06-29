@@ -19,7 +19,7 @@ X 6. **Create a Join Table**:
 X 7. **Seed Data**:
    - Create a seed file to populate the `users` table with sample data.
 
-8. **Rollback a Migration**:
+X 8. **Rollback a Migration**:
    - Write a migration to undo the last migration (rollback).
 
 9. **Rename a Column**:
