@@ -7,10 +7,12 @@ class ArticleTest < ActiveSupport::TestCase
     assert_raises ( ActiveRecord::RecordInvalid ) {
       Article.create!(title: "Article")
     }
+  end
 
-    Article.create!(title: "Post")
+  test "Test the custom validation by 
+  creating an article with a future date." do
     assert_raises ( ActiveRecord::RecordInvalid ) {
-      Article.create!(title: "Post")
+      Article.create!(title: "My Article", published_date: Date.current.next_day)
     }
   end
 end

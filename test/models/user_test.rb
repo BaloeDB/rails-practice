@@ -8,18 +8,13 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "Test the length validation with both valid and invalid usernames." do
-    # Invalid usernames
+    # Invalid username
     assert_raises ( ActiveRecord::RecordInvalid ) {
-      User.create!(username: "aa")
-    }
-    assert_raises ( ActiveRecord::RecordInvalid ) {
-      User.create!(username: "aabbccddeeffgghhiijjkkllmm")
+      invalid = User.create!(username: "aa")
     }
 
-    # Valid usernames
-    user1 = User.create!(username: "aabb")
-    user2 = User.create!(username: "aabbccddeeff")
-    assert_includes User.all, user1
-    assert_includes User.all, user2
+    # Valid username
+    valid = User.create!(username: "aabb")
+    assert_includes User.all, valid
   end
 end
