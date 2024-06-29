@@ -1,3 +1,5 @@
+!!!NOTE!!!: The Active Record way claims that intelligence belongs in your models, not in the database.
+
 X 1. **Create a Migration**:
    - Write a migration to create a new table called `users` with columns for `name`, `email`, and `password`.
 
@@ -29,7 +31,7 @@ X 10. **Add Timestamps**:
     - Generate a migration to add `created_at` and `updated_at` timestamps to the `products` table.
     - I am doing this on the roles_users table. Entity tables already come with timestamps by default.
 
-11. **Custom Validation**:
+X 11. **Custom Validation**:
     - Write a migration to add a unique constraint on the `email` column in the `users` table.
 
 12. **Composite Primary Key**:
