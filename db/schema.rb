@@ -10,13 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_06_29_121759) do
+ActiveRecord::Schema[7.1].define(version: 2024_06_29_122846) do
   create_table "orders", primary_key: ["user_id", "product_id", "created_at"], force: :cascade do |t|
     t.integer "user_id", null: false
     t.integer "product_id", null: false
     t.integer "quantity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "status", default: "Processing"
     t.index ["product_id"], name: "index_orders_on_product_id"
     t.index ["user_id"], name: "index_orders_on_user_id"
   end

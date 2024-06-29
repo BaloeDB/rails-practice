@@ -37,7 +37,7 @@ X 11. **Custom Validation**:
 X 12. **Composite Primary Key**:
     - Create a migration for a table with a composite primary key (e.g., `order_items` with `order_id` and `product_id`).
 
-13. **Change Default Value**:
+X 13. **Change Default Value**:
     - Modify the default value of the `status` column in the `orders` table.
 
 14. **Add Foreign Key Constraint**:
