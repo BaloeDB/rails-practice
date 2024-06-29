@@ -1,11 +1,21 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
+peter:
   name: Peter Diepstraten
   email: psrdiepstraten@gmail.com
   username: PeterDiep
 
-two:
+eduard:
   name: Eduard Diepstraten
   email: eduard.diepstraten@gmail.com
   username: EddieBabe
+
+eduard2:
+  name: Eduard Douwes Dekker
+  email: max.havelaar@gmail.com
+  username: Multatuli
+
+delete:
+  name: Temp Tempest
+  email: temp@gmail.com
+  username: TempTempest
