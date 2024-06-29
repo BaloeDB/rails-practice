@@ -16,7 +16,7 @@ X 5. **Add an Index**:
 X 6. **Create a Join Table**:
    - Generate a migration for a many-to-many relationship between `users` and `roles`.
 
-7. **Seed Data**:
+X 7. **Seed Data**:
    - Create a seed file to populate the `users` table with sample data.
 
 8. **Rollback a Migration**:
