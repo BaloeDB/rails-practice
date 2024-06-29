@@ -22,7 +22,7 @@ X 7. **Seed Data**:
 X 8. **Rollback a Migration**:
    - Write a migration to undo the last migration (rollback).
 
-9. **Rename a Column**:
+X 9. **Rename a Column**:
    - Create a migration to rename the `name` column in the `users` table to `full_name`.
 
 10. **Add Timestamps**:
