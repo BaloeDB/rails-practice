@@ -25,8 +25,9 @@ X 8. **Rollback a Migration**:
 X 9. **Rename a Column**:
    - Create a migration to rename the `name` column in the `users` table to `full_name`.
 
-10. **Add Timestamps**:
+X 10. **Add Timestamps**:
     - Generate a migration to add `created_at` and `updated_at` timestamps to the `products` table.
+    - I am doing this on the roles_users table. Entity tables already come with timestamps by default.
 
 11. **Custom Validation**:
     - Write a migration to add a unique constraint on the `email` column in the `users` table.
