@@ -34,7 +34,7 @@ X 10. **Add Timestamps**:
 X 11. **Custom Validation**:
     - Write a migration to add a unique constraint on the `email` column in the `users` table.
 
-12. **Composite Primary Key**:
+X 12. **Composite Primary Key**:
     - Create a migration for a table with a composite primary key (e.g., `order_items` with `order_id` and `product_id`).
 
 13. **Change Default Value**:
