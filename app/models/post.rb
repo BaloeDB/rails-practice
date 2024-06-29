@@ -8,8 +8,9 @@ class Post < ApplicationRecord
 
     # SCOPES
     # retrieve all posts with a specific `title`.
+    # %...% is contains, ...% is starts_with, %... is ends_with
     scope :contains_title, -> (title) { where("title LIKE ?",
-    sanitize_sql_like(title) + "%") }
+    "%" + sanitize_sql_like(title) + "%") }
 
     # METHODS
     # calculate the number of words in the `content` attribute.

@@ -1,11 +1,16 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
+peter_post:
   user: peter
   title: PeterDiep Post
   content: Content of PeterDiep Post
 
-two:
+eduard_post:
   user: eduard
   title: EddieBabe Post
   content: Content of EddieBabe Post
+
+eduard2_post:
+  user: eduard2
+  title: Multatuli Post
+  content: Content of Multatuli Post

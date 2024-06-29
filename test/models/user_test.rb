@@ -5,7 +5,7 @@ class UserTest < ActiveSupport::TestCase
     @peter = users(:peter)
     @eduard = users(:eduard)
     @eduard2 = users(:eduard2)
-    @to_delete = users(:delete)
+    @temp = users(:temp)
   end
 
   test "1. Test creation of `User` model." do
@@ -51,8 +51,8 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "9. Test deletion of `User`." do
-    User.delete_by(id: @to_delete.id)
-    assert_not_includes User.all, @to_delete
+    User.delete_by(id: @temp.id)
+    assert_not_includes User.all, @temp
   end
 
   test "10. Test `User` scope for `name`." do
