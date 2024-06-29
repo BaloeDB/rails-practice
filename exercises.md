@@ -1,4 +1,4 @@
-1. **Create a Migration**:
+X 1. **Create a Migration**:
    - Write a migration to create a new table called `users` with columns for `name`, `email`, and `password`.
 
 2. **Add a Column**:
