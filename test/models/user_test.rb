@@ -28,4 +28,28 @@ class UserTest < ActiveSupport::TestCase
     valid = User.create!(username: "abba", email: "abba@gmail.com")
     assert_includes User.all, valid
   end
+
+  test "Test the custom error messages by 
+  triggering validation errors." do
+    # Failed username presence validation
+    begin
+      User.create!()
+    rescue => error
+      assert_includes error.message, "Username cannot be blank"
+    end
+
+    # Failed username length validation
+    begin
+      User.create!(username: "aa")
+    rescue => error
+      assert_includes error.message, "Username must be between 3 and 20 characters long"
+    end
+
+    # Failed email format validation
+    begin
+      User.create!(username: "abba", email: "abba.com")
+    rescue => error
+      assert_includes error.message, "Email must be in format user@host.domain"
+    end
+  end
 end
