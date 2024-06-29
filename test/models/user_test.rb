@@ -52,4 +52,22 @@ class UserTest < ActiveSupport::TestCase
       assert_includes error.message, "Email must be in format user@host.domain"
     end
   end
+
+  test "Test various scenarios to ensure all validations work together." do
+    # Invalid: username not unique
+    User.create(username: "abba")
+    begin
+      User.create!(username: "abba")
+    rescue => error
+      assert_includes error.message, "Username must be unique"
+    end
+
+    # Invalid: username not correct length, username not present
+    begin
+      User.create!()
+    rescue => error
+      assert_includes error.message, "Username cannot be blank"
+      assert_includes error.message, "Username must be between 3 and 20 characters long"
+    end
+  end
 end
