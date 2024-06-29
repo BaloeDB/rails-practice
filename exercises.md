@@ -40,8 +40,10 @@ X 12. **Composite Primary Key**:
 X 13. **Change Default Value**:
     - Modify the default value of the `status` column in the `orders` table.
 
-14. **Add Foreign Key Constraint**:
+X 14. **Add Foreign Key Constraint**:
     - Write a migration to add a foreign key constraint between `products` and `categories`.
+    - I only add new tables if I think it is neccessary for the exercise. I can do this exercise also for orders-users and orders-products.
+    - Foreign key constraints get added by default. Difficult to think of an example where they should be added manually.
 
 15. **Create a View**:
     - Generate a migration to create a database view that combines data from multiple tables.
