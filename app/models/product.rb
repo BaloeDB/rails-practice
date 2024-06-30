@@ -27,4 +27,11 @@ class Product < ApplicationRecord
     before_save do
         self.sku = Digest::SHA1.hexdigest(self.name)
     end
+
+    # Exercise 15: Create a `after_destroy` 
+    # callback to log deleted products.
+    # Changed it to before_destroy so that we can still the product.
+    before_destroy do
+        Log.create!(content: "#{self.name} was deleted at #{Date.current}")
+    end
 end

@@ -152,4 +152,23 @@ class ProductTest < ActiveSupport::TestCase
     # Assert that sku is equal to hash of name
     assert_equal product.sku, Digest::SHA1.hexdigest(product.name)
   end
+
+  test "Exercise 15: Create a `after_destroy` callback 
+  to log deleted products." do
+    # Create a product
+    name = "My Product"
+    price = 123.45
+    description = "My Description"
+    
+    product = Product.create!(name: name, price: price, description: description)
+
+    # Delete the product
+    product.destroy
+
+    # Read the latest log
+    log = Log.last
+
+    # Assert that the log is about this product
+    assert_equal log.content, "#{name} was deleted at #{Date.current}"
+  end
 end
