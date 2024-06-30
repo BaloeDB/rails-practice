@@ -11,6 +11,8 @@
 2. **Active Record Migrations**:
     - Exercise 5: Write a migration to add a `category_id` foreign key to the `products` table.
     - Exercise 6: Create a migration to rename the `description` column to `product_description`.
+        - This breaks the tests, there is no real reason to do this.
+        - I could create an alias in the Product model, using alias_attribute.
     - Exercise 7: Add a new column called `quantity` to the `products` table using a migration.
     - Exercise 8: Roll back a specific migration and then re-run it.
 
