@@ -14,18 +14,18 @@ class UserTest < ActiveSupport::TestCase
     }
 
     # Valid username
-    valid = User.create!(username: "aabb")
+    valid = User.create!(username: "Abba")
     assert_includes User.all, valid
   end
 
   test "Test the format validation with different email addresses." do
     # Invalid email format
     assert_raises ( ActiveRecord::RecordInvalid ) {
-      invalid = User.create!(username: "abba", email: "abba.com")
+      invalid = User.create!(username: "Abba", email: "abba.com")
     }
 
     # Valid email format
-    valid = User.create!(username: "abba", email: "abba@gmail.com")
+    valid = User.create!(username: "Abba", email: "abba@gmail.com")
     assert_includes User.all, valid
   end
 
@@ -40,14 +40,14 @@ class UserTest < ActiveSupport::TestCase
 
     # Failed username length validation
     begin
-      User.create!(username: "aa")
+      User.create!(username: "Aa")
     rescue => error
       assert_includes error.message, "Username must be between 3 and 20 characters long"
     end
 
     # Failed email format validation
     begin
-      User.create!(username: "abba", email: "abba.com")
+      User.create!(username: "Abba", email: "abba.com")
     rescue => error
       assert_includes error.message, "Email must be in format user@host.domain"
     end
@@ -55,9 +55,9 @@ class UserTest < ActiveSupport::TestCase
 
   test "Test various scenarios to ensure all validations work together." do
     # Invalid: username not unique
-    User.create(username: "abba")
+    User.create(username: "Abba")
     begin
-      User.create!(username: "abba")
+      User.create!(username: "Abba")
     rescue => error
       assert_includes error.message, "Username must be unique"
     end
@@ -69,5 +69,15 @@ class UserTest < ActiveSupport::TestCase
       assert_includes error.message, "Username cannot be blank"
       assert_includes error.message, "Username must be between 3 and 20 characters long"
     end
+  end
+
+  test "Test the custom validation with various usernames." do
+    # Valid: contains an uppercase
+    valid = User.create!(username: "Abba")
+    assert_includes User.all, valid
+    # Invalid: does not contain an uppercase
+    assert_raises ( ActiveRecord::RecordInvalid ) {
+      invalid = User.create!(username: "abba")
+    }
   end
 end
