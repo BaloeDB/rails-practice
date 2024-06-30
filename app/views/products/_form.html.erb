@@ -27,6 +27,17 @@
   </div>
 
   <div>
+    <%= form.label :quantity, style: "display: block" %>
+    <%= form.number_field :quantity %>
+  </div>
+
+  <%# Todo: This should only select from existing categories %>
+  <div>
+    <%= form.label :category_id, style: "display: block" %>
+    <%= form.number_field :category_id %>
+  </div>
+
+  <div>
     <%= form.submit %>
   </div>
 <% end %>
