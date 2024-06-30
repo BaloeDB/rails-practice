@@ -15,6 +15,7 @@
         - I could create an alias in the Product model, using alias_attribute.
     - Exercise 7: Add a new column called `quantity` to the `products` table using a migration.
     - Exercise 8: Roll back a specific migration and then re-run it.
+      - Already have done this a lot. db:migrate & db:rollback.
 
 3. **Active Record Validations**:
     - Exercise 9: Add validation to the `Product` model to ensure that the `name` field is present.

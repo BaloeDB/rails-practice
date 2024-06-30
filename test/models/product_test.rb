@@ -56,4 +56,23 @@ class ProductTest < ActiveSupport::TestCase
     assert_includes category.products, product
     assert_equal product.category, category
   end
+
+  test "Exercise 7: Add a new column called `quantity` to the `products` table using a migration." do
+    # Create a product
+    name = "My Product"
+    price = 123.45
+    description = "My Description"
+    
+    product = Product.create!(name: name, price: price, description: description)
+
+    # Assert that product has no quantity yet
+    assert_nil product.quantity
+
+    # Assign a quantity to the product
+    quantity = 5
+    product.update!(quantity: quantity)
+
+    # Assert that a quantity can be added to a product
+    assert_equal product.quantity, quantity
+  end
 end
