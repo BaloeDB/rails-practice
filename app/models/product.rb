@@ -8,4 +8,8 @@ class Product < ApplicationRecord
     # Exercise 9: Add validation to the `Product` model to 
     # ensure that the `name` field is present.
     validates :name, presence: true
+
+    # Exercise 10: Implement a custom validation to check 
+    # if the `price` is a positive number.
+    validates :price, numericality: { greater_than: 0 }
 end

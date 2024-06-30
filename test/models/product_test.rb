@@ -92,4 +92,26 @@ class ProductTest < ActiveSupport::TestCase
       Product.create!(price: price, description: description)
     }
   end
+
+  test "Exercise 10: Implement a custom validation to check if the `price` is a positive number." do
+    # Create a product with a negative price
+    name = "My Product"
+    price = -123.45
+    description = "My Description"
+
+    product = Product.new(name: name, price: price, description: description)
+
+    # Assert that product with negative price is not valid
+    assert_equal product.valid?, false
+    
+    # Assert that product with negative price cannot be created
+    assert_raise ( ActiveRecord::RecordInvalid ) {
+      Product.create!(name: name, price: price, description: description)
+    }
+
+    # Also assert that product with price=0 cannot be created
+    assert_raise ( ActiveRecord::RecordInvalid ) {
+      Product.create!(name: name, price: 0, description: description)
+    }
+  end
 end

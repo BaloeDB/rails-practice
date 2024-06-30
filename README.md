@@ -20,6 +20,7 @@
 3. **Active Record Validations**:
     - Exercise 9: Add validation to the `Product` model to ensure that the `name` field is present.
     - Exercise 10: Implement a custom validation to check if the `price` is a positive number.
+     - No need to do this with a custom validation. Numericality already exists for this.
     - Exercise 11: Create a form that displays validation errors when saving an invalid product.
     - Exercise 12: Write a test to verify the validation rules for the `Product` model.
 
