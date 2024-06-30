@@ -75,4 +75,21 @@ class ProductTest < ActiveSupport::TestCase
     # Assert that a quantity can be added to a product
     assert_equal product.quantity, quantity
   end
+
+  test "Exercise 9: Add validation to the `Product` model to 
+  ensure that the `name` field is present." do 
+    # Create a product without a name
+    price = 123.45
+    description = "My Description"
+
+    product = Product.new(price: price, description: description)
+
+    # Assert that product without name is not valid
+    assert_equal product.valid?, false
+    
+    # Assert that product without name cannot be created
+    assert_raise ( ActiveRecord::RecordInvalid ) {
+      Product.create!(price: price, description: description)
+    }
+  end
 end
