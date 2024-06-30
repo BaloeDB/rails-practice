@@ -58,9 +58,9 @@
     - Discuss scenarios where skipping validations might be necessary.
     - Skipping validations directly is not a good idea. But skipping validations for certain conditions is a good practice. You can do this by using unless/if and contexts.
 
-14. **Callbacks and Validations**:
+<!-- 14. **Callbacks and Validations**:
     - Explore how callbacks (e.g., `before_save`, `after_validation`) interact with validations.
-    - Create a callback that modifies an attribute before saving.
+    - Create a callback that modifies an attribute before saving. -->
 
 15. **Scoped Validations**:
     - Add a validation to the `Comment` model to ensure that comments are unique within an article.
