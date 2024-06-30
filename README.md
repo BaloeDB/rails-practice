@@ -53,7 +53,10 @@
 
 13. **Skipping Validations**:
     - Learn how to skip validations using `save(validate: false)` and `update_columns`.
+    - https://guides.rubyonrails.org/active_record_validations.html#skipping-validations
+    - https://alexbarret.com/blog/2021/skip-existing-validations-in-rails/
     - Discuss scenarios where skipping validations might be necessary.
+    - Skipping validations directly is not a good idea. But skipping validations for certain conditions is a good practice. You can do this by using unless/if and contexts.
 
 14. **Callbacks and Validations**:
     - Explore how callbacks (e.g., `before_save`, `after_validation`) interact with validations.
