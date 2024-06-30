@@ -66,9 +66,10 @@
     - Add a validation to the `Comment` model to ensure that comments are unique within an article.
     - Test the validation by creating duplicate comments within the same article.
 
-16. **Conditional Validation Logic**:
+<!-- Already done in exercise 4/5 -->
+<!-- 16. **Conditional Validation Logic**:
     - Create a custom validation method in the `Article` model that checks if the `published_date` is within a specific range.
-    - Test the validation with different dates.
+    - Test the validation with different dates. -->
 
 17. **Validation Groups**:
     - Organize validations into groups (e.g., `on: :create`, `on: :update`).
