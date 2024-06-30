@@ -15,4 +15,24 @@ class ProductTest < ActiveSupport::TestCase
     assert_equal product.price, price
     assert_equal product.description, description
   end
+
+  test "Exercise 3: Implement a scope in the `Product` model 
+  to retrieve all products with prices greater than $50." do
+    # 5 Products that cost more than 50
+    for i in 1..5 do
+      Product.create!(name: "Product #{i}" , price: 50 + i, description: "Product #{i} Description")
+    end
+
+    # 5 Products that cost less than 50
+    for i in 6..10 do
+      Product.create!(name: "Product #{i}", price: 50 - i, description: "Product #{i} Description")
+    end
+
+    # Should retrieve 5 products that costs more than 50
+    scope = Product.costs_more_than_50
+    assert_equal scope.length, 5
+    for i in 1..5 do
+      assert_includes scope, Product.find_by(name: "Product #{i}")
+    end
+  end
 end
