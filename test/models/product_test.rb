@@ -171,4 +171,26 @@ class ProductTest < ActiveSupport::TestCase
     # Assert that the log is about this product
     assert_equal log.content, "#{name} was deleted at #{Date.current}"
   end
+
+  test "Exercise 17: Set up a one-to-many association between 
+  `Grouping` and `Product` models." do
+    # Create a product
+    name = "My Product"
+    price = 123.45
+    description = "My Description"
+    
+    product = Product.create!(name: name, price: price, description: description)
+
+    # Create a grouping
+    grouping_name = "My Group"
+    grouping = Grouping.create!(name: grouping_name)
+
+    # Add the product to the grouping
+    product.update!(grouping: grouping)
+
+    # Assert that the grouping includes the product
+    assert_includes grouping.products, product
+    # Assert that the product belongs to the grouping
+    assert_equal product.grouping, grouping
+  end
 end

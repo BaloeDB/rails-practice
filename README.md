@@ -32,7 +32,7 @@
     - Exercise 16: Test the behavior of your callbacks using RSpec or MiniTest.
 
 5. **Association Basics**:
-    - Exercise 17: Set up a one-to-many association between `User` and `Order` models.
+    - Exercise 17: Set up a one-to-many association between `Grouping` and `Product` models.
     - Exercise 18: Create a many-to-many association between `Product` and `Category` models.
     - Exercise 19: Implement a nested form to add multiple products to an order.
     - Exercise 20: Write a query to retrieve all orders along with their associated products.

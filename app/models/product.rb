@@ -1,6 +1,7 @@
 require 'digest/sha1'
 
 class Product < ApplicationRecord
+    belongs_to :grouping, optional: true
     belongs_to :category, optional: true
 
     # Exercise 3: Implement a scope in the `Product` model 
