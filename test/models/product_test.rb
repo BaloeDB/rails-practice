@@ -35,4 +35,25 @@ class ProductTest < ActiveSupport::TestCase
       assert_includes scope, Product.find_by(name: "Product #{i}")
     end
   end
+  
+  test "Exercise 5: Write a migration to add a `category_id` 
+  foreign key to the `products` table." do
+    # Create a category
+    name = "My Category"
+    category = Category.create!(name: name)
+    
+    # Create a product
+    name = "My Product"
+    price = 123.45
+    description = "My Description"
+    
+    product = Product.create!(name: name, price: price, description: description)
+
+    # Assign a category to the product
+    product.update!(category: category)
+
+    # Assert that a category can be added to a product
+    assert_includes category.products, product
+    assert_equal product.category, category
+  end
 end

@@ -1,3 +1,5 @@
+<!-- Note: I should probably prevent new migrations from failing on previous objects/tests. You can deal with this in multiple ways.  -->
+
 1. **Active Record Basics**:
     - Exercise 1: Create a new Rails application and define a model called `Product` with attributes like `name`, `price`, and `description`.
     - Exercise 2: Write a migration to add an index on the `name` column of the `products` table.
