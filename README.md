@@ -3,6 +3,8 @@
     - Exercise 2: Write a migration to add an index on the `name` column of the `products` table.
     - Exercise 3: Implement a scope in the `Product` model to retrieve all products with prices greater than $50.
     - Exercise 4: Create a form to add new products through a web interface.
+      - Use rails generate scaffold_controller to create controller and views for already existing model
+      - Also pass the properties of the model to make sure they are includes
 
 2. **Active Record Migrations**:
     - Exercise 5: Write a migration to add a `category_id` foreign key to the `products` table.
