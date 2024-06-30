@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_06_30_173011) do
+ActiveRecord::Schema[7.1].define(version: 2024_06_30_174136) do
   create_table "categories", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
@@ -42,6 +42,18 @@ ActiveRecord::Schema[7.1].define(version: 2024_06_30_173011) do
     t.index ["category_id"], name: "index_products_on_category_id"
     t.index ["grouping_id"], name: "index_products_on_grouping_id"
     t.index ["name"], name: "index_products_on_name"
+  end
+
+  create_table "products_tags", id: false, force: :cascade do |t|
+    t.integer "product_id", null: false
+    t.integer "tag_id", null: false
+    t.index ["product_id", "tag_id"], name: "index_products_tags_on_product_id_and_tag_id", unique: true
+  end
+
+  create_table "tags", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   add_foreign_key "products", "categories"

@@ -193,4 +193,26 @@ class ProductTest < ActiveSupport::TestCase
     # Assert that the product belongs to the grouping
     assert_equal product.grouping, grouping
   end
+
+  test "Exercise 18: Create a many-to-many association 
+  between `Product` and `Category` models." do
+    # Create a product
+    name = "My Product"
+    price = 123.45
+    description = "My Description"
+    
+    product = Product.create!(name: name, price: price, description: description)
+
+    # Create a tag
+    tag_name = "My Tag"
+    tag = Tag.create!(name: tag_name)
+
+    # Add the tag to the product list of tags
+    product.tags << tag
+
+    # Assert that the tag product list includes the product
+    assert_includes tag.products, product
+    # Assert that the product tag list includes the tag
+    assert_includes product.tags, tag
+  end
 end
