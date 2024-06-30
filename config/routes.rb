@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  root "home#index"
+  resources :logs
+  resources :tags
+  resources :groupings
   resources :products
   resources :categories
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
