@@ -114,4 +114,25 @@ class ProductTest < ActiveSupport::TestCase
       Product.create!(name: name, price: 0, description: description)
     }
   end
+
+  test "Exercise 13: Define a `before_save` callback in the 
+  `Product` model to update the `updated_at` timestamp." do
+    # Store datetime before saving product
+    before_save = DateTime.current
+
+    # Create a product
+    name = "My Product"
+    price = 123.45
+    description = "My Description"
+    
+    product = Product.create!(name: name, price: price, description: description)
+
+    # Store datetime after saving product
+    after_save = DateTime.current
+
+    # Assert that updated_at is after before_save
+    assert product.updated_at.after?(before_save)
+    # Assert that updated_at is before after_save
+    assert product.updated_at.before?(after_save)
+  end
 end

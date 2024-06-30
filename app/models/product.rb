@@ -12,4 +12,10 @@ class Product < ApplicationRecord
     # Exercise 10: Implement a custom validation to check 
     # if the `price` is a positive number.
     validates :price, numericality: { greater_than: 0 }
+
+    # Exercise 13: Define a `before_save` callback in the 
+    # `Product` model to update the `updated_at` timestamp.
+    before_save do
+        self.updated_at = DateTime.current
+    end
 end
