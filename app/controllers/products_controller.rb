@@ -1,3 +1,5 @@
+# TODO: tag_ids are not processed by controller, figure out why.
+
 class ProductsController < ApplicationController
   before_action :set_product, only: %i[ show edit update destroy ]
 
@@ -22,7 +24,6 @@ class ProductsController < ApplicationController
   # POST /products
   def create
     @product = Product.new(product_params)
-
     if @product.save
       redirect_to @product, notice: "Product was successfully created."
     else
@@ -53,6 +54,7 @@ class ProductsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def product_params
-      params.require(:product).permit(:name, :description, :price, :quantity, :category_id)
+      params.require(:product).permit(:name, :description, 
+      :price, :quantity, :category_id, :grouping_id, :tag_ids)
     end
 end

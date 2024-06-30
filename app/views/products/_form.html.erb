@@ -33,7 +33,17 @@
 
   <div>
     <%= form.label :category_id, style: "display: block" %>
-    <%= form.select :category_id, Category.all.map { |category| [category.name, category.id] } %>
+    <%= form.collection_select :category_id, Category.order(:name), :id, :name %>
+  </div>
+
+  <div>
+    <%= form.label :grouping_id, style: "display: block" %>
+    <%= form.collection_radio_buttons :grouping_id, Grouping.order(:name), :id, :name %>
+  </div>
+
+  <div>
+    <%= form.label :tag_ids, style: "display: block" %>
+    <%= form.collection_check_boxes :tag_ids, Tag.order(:name), :id, :name %>
   </div>
 
   <div>

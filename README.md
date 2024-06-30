@@ -36,4 +36,5 @@
     - Exercise 18: Create a many-to-many association between `Product` and `Tag` models.
     - Exercise 19: Implement a nested form to add multiple products to an order.
         - Let's add controllers & views for all the models at the moment
+        - Todo: fix controller not processing tag_ids bug, properly connect all models (add tags to product, add products to tag)
     - Exercise 20: Write a query to retrieve all orders along with their associated products.

@@ -28,4 +28,22 @@
     <% end %>
   </p>
 
+  <p>
+    <% if product.grouping_id %>
+      <strong>Grouping:</strong>
+      <%= product.grouping.name %>
+    <% else %>
+      <strong>No Grouping</strong>
+    <% end %>
+  </p>
+
+  <p>
+    <% if !product.tags.empty? %>
+      <strong>Tags:</strong>
+      <%= product.tags.map { |tag| tag.name } %>
+    <% else %>
+      <strong>No Tags</strong>
+    <% end %>
+  </p>
+
 </div>
