@@ -1,4 +1,5 @@
 require "test_helper"
+require 'digest/sha1'
 
 class ProductTest < ActiveSupport::TestCase
   test "Exercise 1: Create a new Rails application and 
@@ -134,5 +135,21 @@ class ProductTest < ActiveSupport::TestCase
     assert product.updated_at.after?(before_save)
     # Assert that updated_at is before after_save
     assert product.updated_at.before?(after_save)
+  end
+
+  test "Exercise 14: Implement a `before_create` callback 
+  to generate a unique SKU for each product." do
+    # Create a product
+    name = "My Product"
+    price = 123.45
+    description = "My Description"
+    
+    product = Product.create!(name: name, price: price, description: description)
+
+    # Assert that a sku is generated
+    assert_not_empty product.sku
+
+    # Assert that sku is equal to hash of name
+    assert_equal product.sku, Digest::SHA1.hexdigest(product.name)
   end
 end

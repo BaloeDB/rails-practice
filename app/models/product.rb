@@ -1,3 +1,5 @@
+require 'digest/sha1'
+
 class Product < ApplicationRecord
     belongs_to :category, optional: true
 
@@ -17,5 +19,12 @@ class Product < ApplicationRecord
     # `Product` model to update the `updated_at` timestamp.
     before_save do
         self.updated_at = DateTime.current
+    end
+
+    # Exercise 14: Implement a `before_create` callback to 
+    # generate a unique SKU for each product.
+    # Changed it to before_save so that name is always related to sku.
+    before_save do
+        self.sku = Digest::SHA1.hexdigest(self.name)
     end
 end
