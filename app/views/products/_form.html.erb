@@ -12,41 +12,41 @@
   <% end %>
 
   <div>
-    <%= form.label :name, style: "display: block" %>
+    <%= form.label :name %>
     <%= form.text_field :name %>
-  </div>
+  </div><br>
 
-  <div>
-    <%= form.label :description, style: "display: block" %>
+  <div style="display: flex; align-items: center">
+    <%= form.label :description, style: "margin-right: 0.5em" %>
     <%= form.text_area :description %>
-  </div>
+  </div><br>
 
   <div>
-    <%= form.label :price, style: "display: block" %>
+    <%= form.label :price %>
     <%= form.text_field :price %>
-  </div>
+  </div><br>
 
   <div>
-    <%= form.label :quantity, style: "display: block" %>
+    <%= form.label :quantity %>
     <%= form.number_field :quantity %>
-  </div>
+  </div><br>
 
   <div>
-    <%= form.label :category_id, style: "display: block" %>
+    <%= form.label :category_id, style: "margin-right: 0.5em" %>
     <%= form.collection_select :category_id, Category.order(:name), :id, :name %>
-  </div>
+  </div><br>
 
   <div>
-    <%= form.label :grouping_id, style: "display: block" %>
+    <%= form.label :grouping_id %>
     <%= form.collection_radio_buttons :grouping_id, Grouping.order(:name), :id, :name %>
-  </div>
+  </div><br>
 
   <div>
-    <%= form.label :tag_ids, style: "display: block" %>
+    <%= form.label :tag_ids %>
     <%= form.collection_check_boxes :tag_ids, Tag.order(:name), :id, :name %>
-  </div>
+  </div><br>
 
-  <div>
+  <div style="margin-top: 1em">
     <%= form.submit %>
   </div>
 <% end %>
