@@ -1,7 +1,13 @@
 <div id="<%= dom_id log %>">
-  <p>
+  <h2>Log #<%= log.id %></h2>
+    
+  <p style="margin-left: 1em">
     <strong>Content:</strong>
     <%= log.content %>
   </p>
 
+  <p style="margin-left: 1em">
+    <strong>Created at:</strong>
+    <%= log.created_at.to_date %>
+  </p>
 </div>

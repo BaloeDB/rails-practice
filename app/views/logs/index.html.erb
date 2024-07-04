@@ -2,13 +2,10 @@
 
 <h1>Logs</h1>
 
-<div id="logs">
+<div id="groupings">
   <% @logs.each do |log| %>
+    <hr />
+    <%= link_to "Show this log", log %>
     <%= render log %>
-    <p>
-      <%= link_to "Show this log", log %>
-    </p>
   <% end %>
 </div>
-
-<%= link_to "New log", new_log_path %>
