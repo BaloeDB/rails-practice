@@ -1,7 +1,8 @@
 <div id="<%= dom_id grouping %>">
-  <p>
-    <strong>Name:</strong>
-    <%= grouping.name %>
+  <h2><%= grouping.name %></h2>
+    
+  <p style="margin-left: 1em">
+    <strong>Associated products:</strong>
+    <%= grouping.products.map { |product| product.name } %>
   </p>
-
 </div>
