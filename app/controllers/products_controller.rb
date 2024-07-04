@@ -1,4 +1,4 @@
-# TODO: tag_ids are not processed by controller, figure out why.
+# What happens if a id gets saved that is not a valid tag/category/grouping id?
 
 class ProductsController < ApplicationController
   before_action :set_product, only: %i[ show edit update destroy ]
@@ -55,6 +55,6 @@ class ProductsController < ApplicationController
     # Only allow a list of trusted parameters through.
     def product_params
       params.require(:product).permit(:name, :description, 
-      :price, :quantity, :category_id, :grouping_id, :tag_ids)
+      :price, :quantity, :category_id, :grouping_id, tag_ids: [])
     end
 end

@@ -1,7 +1,9 @@
 <div id="<%= dom_id category %>">
-  <p>
-    <strong>Name:</strong>
-    <%= category.name %>
+  <h2><%= category.name %></h2>
+    
+  <p style="margin-left: 1em">
+    <strong>Associated products:</strong>
+    <%= category.products.map { |product| product.name } %>
   </p>
 
 </div>
